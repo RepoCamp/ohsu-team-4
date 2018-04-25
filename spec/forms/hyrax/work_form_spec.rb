@@ -12,5 +12,6 @@ RSpec.describe Hyrax::WorkForm do
   it 'has the expected terms' do
     expect(form.terms).to include(:title)
     expect(form.terms).to include(:year)
+    expect(form.terms).to include(:reference)
   end
 end

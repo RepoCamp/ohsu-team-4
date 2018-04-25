@@ -55,6 +55,7 @@ RSpec.feature 'Create a Work', js: false do
 
       click_link 'Additional fields'
       fill_in 'Year', with: '2005'
+      fill_in 'Reference', with: 'Other work'
 
       # With selenium and the chrome driver, focus remains on the
       # select box. Click outside the box so the next line can't find

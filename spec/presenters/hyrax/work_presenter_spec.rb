@@ -9,6 +9,7 @@ RSpec.describe Hyrax::WorkPresenter do
   let(:visibility) { Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC }
   let(:user)       { 'test@example.com' }
   let(:year)       { ['2018'] }
+  let(:reference)  { ['other work'] }
 
   let :work do
     Work.new(title:      title,
@@ -16,8 +17,9 @@ RSpec.describe Hyrax::WorkPresenter do
              keyword:    keyword,
              year:       year,
              visibility: visibility,
-             depositor:  user)
+             depositor:  user,
+             reference:  reference)
   end
 
-  it { is_expected.to have_attributes(title: title, year: year) }
+  it { is_expected.to have_attributes(title: title, year: year, reference: reference) }
 end

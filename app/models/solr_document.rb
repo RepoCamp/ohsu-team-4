@@ -26,4 +26,7 @@ class SolrDocument
   def year
     self[Solrizer.solr_name('year')]
   end
+  def reference
+    self[Solrizer.solr_name('reference')]
+  end
 end

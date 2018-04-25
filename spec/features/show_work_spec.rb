@@ -7,6 +7,7 @@ RSpec.feature 'Display an Work' do
   let(:visibility) { Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC }
   let(:user)       { 'test@example.com' }
   let(:year)       { ['2018'] }
+  let(:reference)  { ['some work'] }
 
   let :work do
     Work.create(title:      title,
@@ -14,7 +15,8 @@ RSpec.feature 'Display an Work' do
                 keyword:    keyword,
                 year:       year,
                 visibility: visibility,
-                depositor:  user)
+                depositor:  user,
+                reference: reference)
   end
 
   scenario "Show a public Work" do
@@ -25,5 +27,6 @@ RSpec.feature 'Display an Work' do
     expect(page).to have_content work.keyword.first
     expect(page).to have_content work.keyword.last
     expect(page).to have_content work.year.first
+    expect(page).to have_content work.reference.first
   end
 end
