@@ -170,7 +170,7 @@ Hyrax.config do |config|
   # config.audit_user_key = 'audituser@example.com'
   #
   # The banner image. Should be 5000px wide by 1000px tall
-  config.banner_image ||= 'https://user-images.githubusercontent.com/20469703/39268224-12874a7e-4884-11e8-9c09-ccef2c0ab28e.png'
+  config.banner_image = 'https://user-images.githubusercontent.com/20469703/39268224-12874a7e-4884-11e8-9c09-ccef2c0ab28e.png'
 
   # Temporary paths to hold uploads before they are ingested into FCrepo
   # These must be lambdas that return a Pathname. Can be configured separately
