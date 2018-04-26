@@ -92,7 +92,7 @@ Hyrax.config do |config|
 
   # Option to enable/disable full text extraction from PDFs
   # Default is true, set to false to disable full text extraction
-  # config.extract_full_text = true
+  config.extract_full_text = true
 
   # How many seconds back from the current time that we should show by default of the user's activity on the user's dashboard
   # config.activity_to_show_default_seconds_since_now = 24*60*60
@@ -132,7 +132,7 @@ Hyrax.config do |config|
   #   * iiif_image_size_default
   #
   # Default is false
-  # config.iiif_image_server = false
+  config.iiif_image_server = true
 
   # Returns a URL that resolves to an image provided by a IIIF image server
   config.iiif_image_url_builder = lambda do |file_id, base_url, size|
@@ -170,7 +170,7 @@ Hyrax.config do |config|
   # config.audit_user_key = 'audituser@example.com'
   #
   # The banner image. Should be 5000px wide by 1000px tall
-  # config.banner_image = 'https://cloud.githubusercontent.com/assets/92044/18370978/88ecac20-75f6-11e6-8399-6536640ef695.jpg'
+  config.banner_image ||= 'https://user-images.githubusercontent.com/20469703/39268224-12874a7e-4884-11e8-9c09-ccef2c0ab28e.png'
 
   # Temporary paths to hold uploads before they are ingested into FCrepo
   # These must be lambdas that return a Pathname. Can be configured separately

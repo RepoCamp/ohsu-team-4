@@ -28,3 +28,6 @@ dump.rdb
 # Ephemeral application files
 /public/uploads/*
 
+*.DS_Store
+.idea
+.idea/*
